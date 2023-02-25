@@ -1,0 +1,19 @@
+.label {
+	-fx-pref-width: 200px; 
+}
+
+.menu-button{
+	-fx-background-color: transparent;
+}
+
+#itemcategory, #itemProduct, #itemsupplier, #itemcustomer{
+	-fx-background-color: white;
+	-fx-border-color:black;
+	-fx-border-radius: 30;
+}
+
+.text-field {
+	-fx-background-color: white;
+	-fx-border-color:black;
+	-fx-border-radius: 30;
+}

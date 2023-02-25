@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="640.0" stylesheets="@StylingProduct.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StockOutController">
+   <children>
+      <ImageView fitHeight="180.0" fitWidth="269.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="331.0" fitWidth="638.0" layoutX="3.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/240_F_240981152_Shcxjlgwosu8oNH4vkT41fTCGYID3EJL.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="182.0" fitWidth="371.0" layoutX="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/240_F_240981152_Shcxjlgwosu8oNH4vkT41fTCGYID3EJL.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#d05271" layoutX="314.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock Out" wrappingWidth="283.0">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="209.0" fitWidth="208.0" layoutX="433.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/images.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="9.0" layoutY="193.0" prefHeight="271.0" prefWidth="424.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="222.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="202.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="25.0" prefWidth="149.0" text="Quantity" textFill="#b9324d" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Maiandra GD" size="21.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="149.0" text="Product" textFill="#b9324d">
+               <font>
+                  <Font name="Maiandra GD" size="21.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#removeStock" prefHeight="42.0" prefWidth="106.0" text="Remove" textFill="#b2394d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <GridPane fx:id="itemProduct" GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="183.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="19.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <MenuButton fx:id="productMenu" mnemonicParsing="false" onAction="#HandleproductMenu" prefHeight="31.0" prefWidth="17.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                  <items>
+                  </items>
+                  </MenuButton>
+                  <Label fx:id="Selectedproduct" prefHeight="31.0" prefWidth="169.0" />
+               </children>
+            </GridPane>
+            <TextField fx:id="quantity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="25.0" prefWidth="149.0" text="Reason" textFill="#b9324d" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Maiandra GD" size="21.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="reason" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AvailableStockController">
+   <children>
+      <ImageView fitHeight="176.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="193.0" fitWidth="407.0" layoutX="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/240_F_240981152_Shcxjlgwosu8oNH4vkT41fTCGYID3EJL.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="316.0" fitWidth="689.0" layoutX="-1.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/240_F_240981152_Shcxjlgwosu8oNH4vkT41fTCGYID3EJL.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#bc2541" layoutX="347.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Stock" wrappingWidth="276.5966796875">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="212.0" fitWidth="197.0" layoutX="444.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/images.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="1.0" layoutY="184.0" prefHeight="292.0" prefWidth="435.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="435.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="278.0" prefWidth="434.0">
+                    <columns>
+                      <TableColumn fx:id="productName" prefWidth="105.0" text="Product Name" />
+                      <TableColumn fx:id="category" prefWidth="81.0" text="Category" />
+                      <TableColumn fx:id="quantity" prefWidth="74.0" text="Quantity" />
+                      <TableColumn fx:id="sellingPrice" prefWidth="70.0" text="Selling Price" />
+                      
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      
+   </children>
+</AnchorPane>
